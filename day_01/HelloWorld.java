@@ -4,8 +4,7 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//provo ad aggiungere una riga e rifare il git
-		//terza prova di commit
+		//quarta prova
 		System.out.println("Hello World");
 	}
 

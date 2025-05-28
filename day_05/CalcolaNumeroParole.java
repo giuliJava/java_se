@@ -1,4 +1,4 @@
-package day_04;
+package day_05;
 /*
  * Calcola numero parole di una frase - Scritto insieme con il docente
  */

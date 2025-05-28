@@ -30,7 +30,7 @@ public class ContaOccorrenzeLettera {
 		//5° Converto l'intera frase in minuscolo
 		String fraseMinuscola = frase.toLowerCase();
 		
-		//6° Con un ciclo for itero l'intera frase
+		//6° Con un ciclo for per iterare l'intera frase
 		for(int i = 0; i < fraseMinuscola.length(); i++) {
 			//Con charAt(i) seleziono la lettera nella posizione in cui si trova il ciclo for in 
 			//quel momento

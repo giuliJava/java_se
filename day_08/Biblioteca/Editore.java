@@ -1,9 +1,10 @@
-package day_08;
+package day_08.Biblioteca;
 
 public class Editore {
-	public String partitaIva;
-	public String nome;
-	public String indirizzo;
+	private String partitaIva;
+	private String nome;
+	private String indirizzo;
+	
 	public Editore() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -34,7 +35,8 @@ public class Editore {
 	}
 	@Override
 	public String toString() {
-		return "Editore [partitaIva=" + partitaIva + ", nome=" + nome + ", indirizzo=" + indirizzo + "]";
+		return "Editore [partitaIva=" + this.partitaIva + ", nome=" + this.nome + ", indirizzo=" + this.indirizzo + "]";
 	}
+
 
 }

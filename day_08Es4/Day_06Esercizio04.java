@@ -8,27 +8,54 @@ package day_08Es4;
 
 import java.util.Scanner;
 
+/*
 public class Day_06Esercizio04 {
-
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Inserisci codice isbn valido");
-		String isbn = scanner.nextLine();
+		System.out.println("Inserisci codice isbn valido: ");
+		String isbn = scanner.nextLine().toUpperCase();//per leggere tutta la stringa
 		isbn = isbn.replace("-", "");//per togliere eventuali spazi all'interno della stringa
 		isbn = isbn.replace(" ", "");
-		int somma = 0;
-		for(int i = 10,j = 0; i >= 1; i--,j++) {
+		char[] caratteri = isbn.toCharArray();
+		if(caratteri[caratteri.length - 1] == 'X') {
+			caratteri[caratteri.length - 1] = 10; 
 			
-			somma += isbn.charAt(j) * i;
 		}
-		if(somma %11 == 0) {
+		int somma = 0;
+		for(int i = 0; i<caratteri.length; i++) {
+			somma = somma + Character.getNumericValue(caratteri[i] * (10 -i));
+		}
+		if(somma % 11 == 0) {
 			System.out.println("Valido");	
 		}else {
 			System.out.println("NON Valido");
 		}
-		
 		scanner.close();
 
 	}
 
+}*/
+public class Day_06Esercizio04 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Inserisci un ISBN valido");
+		String str = scanner.nextLine().toUpperCase();
+		str = str.replace("-", "");
+		str = str.replace(" ", "");
+		char[] caratteri = str.toCharArray();
+		if (caratteri[caratteri.length - 1] == 'X') {
+			caratteri[caratteri.length - 1] = 10;
+		}
+		int somma = 0;
+
+		for (int i = 0; i < caratteri.length; i++) {
+			somma = somma + Character.getNumericValue(caratteri[i]) * (10 - i);
+		}
+		if (somma % 11 == 0) {
+			System.out.println("ISBN valido");
+		} else {
+			System.out.println("ISBN non valido");
+		}
+		scanner.close();
+	}
 }

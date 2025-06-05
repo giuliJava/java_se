@@ -15,6 +15,16 @@ public class Donna extends Persona {
 		super(codiceFiscale, nome, cognome, nascita, luogo);
 		this.coloreRossetto = coloreRossetto;
 	}
+	
+	
+
+	public String getColoreRossetto() {
+		return coloreRossetto;
+	}
+
+	public void setColoreRossetto(String coloreRossetto) {
+		this.coloreRossetto = coloreRossetto;
+	}
 
 	@Override
 	public String toString() {

@@ -20,6 +20,15 @@ public class PersonaTest {
 		//questo mi comporta che posso utilizzare delle matrici
 		Persona[] persone = {adamo, eva};
 		for(Persona p: persone) {
+			if(p instanceof Uomo) {
+				Uomo u = (Uomo) p;
+				System.out.println("Abbonamento: " + u.isAbbonamentoStadio());
+			}
+			else if(p instanceof Donna) {
+				Donna d = (Donna) p;
+				System.out.println("Colore rossetto: " + d.getColoreRossetto());
+				
+			}
 			System.out.println(p);
 			
 		}
